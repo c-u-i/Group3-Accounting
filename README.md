@@ -1,4 +1,5 @@
 <h2>PROJECT DESCRIPTION:</h2>
+
 Users should be able to:
 
 - Register/Login
@@ -14,9 +15,11 @@ Users should be able to:
 - Transfers (from one customer to another)
 
 <h3>Definitions</h3>
+
 - User input all done through the console
 
 <h3>Timeline</h3>
+
 - Intermediate Delivery:
   - Login with hard-coded users/passwords
   - Welcome page with Balancing and Menu
@@ -31,6 +34,7 @@ Users should be able to:
   - Transfers
 
 <h3>BONUS:</h3>
+
 If this is too simple, here some ideas how you can make the project more complex, potentially using more tools too:
 
 - Save and load data to and from file, to use it later on

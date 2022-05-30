@@ -1,4 +1,4 @@
-package data;
+package options;
 import java.util.Scanner;
 
 

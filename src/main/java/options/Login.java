@@ -1,4 +1,5 @@
 package options;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.HashMap;
 
@@ -36,10 +37,22 @@ public class Login {
         System.out.println("     0. Terminate the program");
         System.out.println();
 
-        System.out.print("Please make a choice: ");
 
         Scanner sc = new Scanner(System.in);
-        int serviceChosen = sc.nextInt();
+        int serviceChosen = -1;
+        System.out.print("Please make a choice: ");
+        while (serviceChosen < 0 || serviceChosen > 2)
+        {
+            try
+            {
+                serviceChosen = sc.nextInt();
+            }
+            catch(InputMismatchException ex)
+            {
+                sc.nextLine(); // this flushes the value from the scanner
+                System.out.print(("Please select a valid option: "));
+            }
+        }
         System.out.println();
 
         if(serviceChosen==1){
@@ -86,7 +99,7 @@ public class Login {
             System.out.println("Good-bye!");
             System.exit(0);
             System.out.println();
-        } else if (serviceChosen!=1 || serviceChosen!=2 || serviceChosen!=0){
+        } else {
             do {
                 if(counter == 3){
                     System.out.println("Good morning! Are you analphabet?");
@@ -103,12 +116,12 @@ public class Login {
                     counter++;
                 }
             } while (true);
-        } else {
-
-// 2. How to catch special signs, pls !!!
-
-            System.out.println("Sorry, but you did not press a number. Program ends with no comments.");
-            System.exit(0);
+//        } else {
+//
+//// 2. How to catch special signs, pls !!!
+//
+//            System.out.println("Sorry, but you did not press a number. Program ends with no comments.");
+//            System.exit(0);
         }
     }
 
